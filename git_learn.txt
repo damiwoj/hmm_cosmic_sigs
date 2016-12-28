@@ -3,6 +3,7 @@
 -------------------------------------------
 git config --global user.name "damiwoj"
 git config --global user.email damiwoj@gmail.com
+git config --global core.editor mcedit
 
 -------------------------------------------
 1. Create a new repository
@@ -24,19 +25,36 @@ git add .
 
 git commit -m "Commit message"
 
-To see what is about to be committed
+* To see what is about to be committed
 git diff --cached
 
-See what git thinks about changes
+* See what git thinks about changes
 git status
+
+*  Add the URL for the remote repository (https://github.com/damiwoj/hmm_cosmic_sigs.git or git@github.com:damiwoj/hmm_cosmic_sigs.git)
+git remote add origin https://github.com/damiwoj/hmm_cosmic_sigs.git
 
 -------------------------------------------
 4. Pushing changes
 -------------------------------------------
-git push origin master
+git push -u origin master
 
 
 
 -------------------------------------------
-3. Add & commit
+5. Fetch a repository
 -------------------------------------------
+* Grab a complete copy of repository
+git clone https://github.com/damiwoj/hmm_cosmic_sigs.git
+
+* Fetch updates made to a remote repository
+git fetch remotename
+
+*  Merge updates made online with your local work
+git merge remotename/branchname
+
+* Grab online updates and merge them with your local work
+git pull remotename branchname
+
+
+
