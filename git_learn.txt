@@ -1,0 +1,42 @@
+-------------------------------------------
+0. Confgure your git environment
+-------------------------------------------
+git config --global user.name "damiwoj"
+git config --global user.email damiwoj@gmail.com
+
+-------------------------------------------
+1. Create a new repository
+-------------------------------------------
+git init
+
+-------------------------------------------
+2. Checkout a repository
+-------------------------------------------
+git clone /path/to/repository
+git clone username@host:/path/to/repository
+
+
+-------------------------------------------
+3. Add & commit
+-------------------------------------------
+git add <filename>
+git add .
+
+git commit -m "Commit message"
+
+To see what is about to be committed
+git diff --cached
+
+See what git thinks about changes
+git status
+
+-------------------------------------------
+4. Pushing changes
+-------------------------------------------
+git push origin master
+
+
+
+-------------------------------------------
+3. Add & commit
+-------------------------------------------
