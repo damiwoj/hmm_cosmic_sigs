@@ -1,22 +1,4 @@
 #!/bin/bash
 
-taxid=$1
-
-
-
-function do_it {
-    file1=$1
-    file2=$2
-    curdir=`pwd`
-    cd ${SISTdir}
-    ./master.pl -f ${curdir}/${file1}.seq -a A -s -0.05 -c > ${curdir}/${file1}.txt
-    cd ${curdir}
-    python generate_next_cycle.py ${file1}.seq ${file1}.txt 0.01 1> ${file2}.seq 2> ${file1}.sibz
-}
-
-do_it 00 01
-do_it 01 02
-do_it 02 03
-do_it 03 04
-do_it 04 05
-do_it 05 06
+mkdir -p models/u_0.001_s_0.1
+python generate_models.py data/cosmic_signatures_probabilities.txt data/Table_SignatureContribution__SupplTab21.csv 0.001 0.1 models/u_0.001_s_0.1
